@@ -46,7 +46,6 @@ class LoggerTest extends \PHPUnit_Framework_TestCase {
 	 * @param string $expected The expected string.
 	 */
 	public function assertLog($expected) {
-		global $CFG;
 		$log = file_get_contents($this->logfile);
 		$log = trim(mb_substr($log, 23));
 		$this->assertEquals($expected, $log);
