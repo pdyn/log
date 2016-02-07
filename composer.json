@@ -15,14 +15,13 @@
     "support": {
         "email": "support@pdyn.net"
     },
-    "version": "1.0.0",
     "require": {
         "php": ">=5.4.0",
         "psr/log": ">=1.0.0",
         "pdyn/datatype": ">=1.0.0"
     },
     "require-dev": {
-        "pdyn/testing": ">=1.0.0",
+        "pdyn/testing": ">=1.0.2",
         "phpunit/phpunit": ">=5.1.7"
     },
     "autoload": {
