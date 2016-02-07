@@ -24,5 +24,10 @@
     "require-dev": {
         "pdyn/testing": ">=1.0.0",
         "phpunit/phpunit": ">=5.1.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "pdyn\\log\\": "."
+        }
     }
 }
