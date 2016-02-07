@@ -34,6 +34,7 @@ class LogParserMock extends \pdyn\log\LogParser {
  *
  * @group pdyn
  * @group pdyn_log
+ * @codeCoverageIgnore
  */
 class LogParserTest extends \PHPUnit_Framework_TestCase {
 
