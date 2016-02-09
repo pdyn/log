@@ -49,15 +49,18 @@ class LogParser {
 	 */
 	public function get_array($reversechronological = false) {
 		if (empty($this->logfile)) {
-			return array();
+			return [];
 		}
 
 		$log = file_get_contents($this->logfile);
 		$log = trim($log);
 		$log = preg_split('#^\[([0-9]{2}\-[a-z]{3}\-[0-9]{4}\s*.+)\]#imuU', $log, null, PREG_SPLIT_DELIM_CAPTURE);
-		array_shift($log);
+		$log0 = array_shift($log);
 
-		$log_organized = array();
+		$log_organized = [];
+		if (!empty($log0)) {
+			$log_organized[] = [$log0];
+		}
 		$logcount = count($log);
 		for ($i = 0; $i < $logcount; $i += 2) {
 			$log_organized[$log[$i]][] = trim($log[$i + 1]);
